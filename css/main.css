@@ -1,0 +1,63 @@
+/*公共样式
+1)	*：的内外边距清零
+2)	Body：的字体字号背景色
+3)	a,a:hover, a:visited：全局链接样式
+4)	Container：所有大区域宽度和居中设置
+5)	lf：float居左
+6)	rf：float居右
+7)	clearfloat：清除float引起的父元素塌陷
+8)	li：去除大圆点
+9)	input,button：去除外边框
+10)	i,b：分别用于sprite图和独立存在的icon图
+*/
+
+*{
+	margin: 0;padding: 0;
+}
+body{
+	font-size: 12px;
+	font-family: '微软雅黑';
+	background-color: #fff;
+}
+a,a:visited{
+	color: #333;
+	text-decoration: none;
+}
+a:hover{
+	color: #cc0D24;
+	text-decoration: none;
+}
+.container{
+	width: 1211px;
+	margin: 0 auto;
+}
+.lf{
+	float:left;
+}
+.rf{
+	float:right;
+}
+
+li{
+	list-style-type: none;
+}
+input,button{
+	outline: none;
+}
+i{
+	background-image: url(../images/iconlist_2.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;/*垂直对齐*/
+}
+b{
+	/*background-image: url(../images/iconlist_2.png);*/
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;/*垂直对齐*/
+}
+.clearfloat:after{
+	display: block;/*块状显示*/
+	clear:both;/*清理浮动影响*/
+	content:'';/*激活伪类的前提*/
+}
